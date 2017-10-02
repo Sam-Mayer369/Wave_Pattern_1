@@ -1,0 +1,56 @@
+class Wave_Pattern
+{
+public static void main(String args[])
+{
+int e=2;
+int wave_height=4; //change value to increase or decrease height of the wave
+int wave_length=4; //cnange value to increase or decrease length of the wave
+int i,j,k,y,count,x=1,c1='A'+wave_height-1,c2='A'+wave_height;
+for(i=1;i<=wave_height;i++)
+{
+for(j=wave_height;j<=wave_height+i;j++)
+{
+System.out.print(" ");
+}
+for(count=1;count<=wave_length;count++)
+{
+for(y=(wave_height+wave_height-2);y>=x;y--)
+{
+System.out.print(" ");
+}
+for(k=1;k<=e;k++)
+{
+if(k==1)
+{
+System.out.print((char)c1);
+System.out.print(" ");
+}
+else if(k==e)
+{
+System.out.print((char)c2);
+System.out.print(" ");
+}
+else
+{
+System.out.print(" ");
+}
+
+}
+c1=c1+wave_height*2;
+c2=c2+wave_height*2;
+if(c1>'Z')
+c1=c1-26;
+if(c2>'Z');
+c2=c2-26;
+}
+x+=2;
+e+=2;
+c1='A'+wave_height-i-1;
+c2='A'+wave_height+i;
+{
+}
+System.out.print("\n");
+}
+}
+}
+
